@@ -29,7 +29,9 @@
     "doctor": "Doctor Consultation",
     "doctor_desc": "Talk to a doctor",
     "sos": "Emergency SOS",
-    "sos_desc": "One-tap emergency help"
+    "sos_desc": "One-tap emergency help",
+    "transport": "Transportation",
+    "transport_desc": "Book Ola, Uber, Rapido"
   },
   "dashboard": {
     "quick_actions": "Quick Actions",

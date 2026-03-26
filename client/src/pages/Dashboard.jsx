@@ -35,6 +35,7 @@ export default function Dashboard() {
     { key: 'medicine', icon: '💊', path: '/medicine', className: 'medicine' },
     { key: 'cleaning', icon: '🧹', path: '/cleaning', className: 'cleaning' },
     { key: 'doctor', icon: '👨‍⚕️', path: '/doctor', className: 'doctor' },
+    { key: 'transport', icon: '🚕', path: '/transport', className: 'transport' },
     { key: 'sos', icon: '🚨', path: '/sos', className: 'sos-card' },
   ];
 
