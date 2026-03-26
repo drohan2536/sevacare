@@ -29,7 +29,9 @@
     "doctor": "डॉक्टर सल्लामसलत",
     "doctor_desc": "डॉक्टरांशी बोला",
     "sos": "आणीबाणी SOS",
-    "sos_desc": "एक टॅप आणीबाणी मदत"
+    "sos_desc": "एक टॅप आणीबाणी मदत",
+    "transport": "परिवहन",
+    "transport_desc": "ओला, उबेर, रॅपिडो बुक करा"
   },
   "dashboard": {
     "quick_actions": "जलद क्रिया",

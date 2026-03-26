@@ -11,6 +11,7 @@ import Massage from './pages/Massage.jsx';
 import Medicine from './pages/Medicine.jsx';
 import Cleaning from './pages/Cleaning.jsx';
 import Doctor from './pages/Doctor.jsx';
+import Transport from './pages/Transport.jsx';
 import SOS from './pages/SOS.jsx';
 import OrderHistory from './pages/OrderHistory.jsx';
 import HealthProfile from './pages/HealthProfile.jsx';
@@ -174,10 +175,11 @@ function VoiceAssistant() {
       cleaning: ['clean', 'सफाई', 'स्वच्छता', 'శుభ్రత', 'சுத்தம்', 'পরিষ্কার', 'સફાઈ', 'ಸ್ವಚ್ಛ'],
       sos: ['emergency', 'sos', 'इमरजेंसी', 'आणीबाणी', 'అత్యవసర', 'அவசர', 'জরুরি', 'ઇમર્જન્સી', 'ತುರ್ತು'],
       orders: ['order', 'ऑर्डर', 'ఆర్డర్', 'ஆர்டர்', 'অர্ডার', 'ઓર્ડર', 'ಆರ್ಡರ್'],
-      home: ['home', 'होम', 'मुख्यपृष्ठ', 'హోమ్', 'முகப்பு', 'হোম', 'હોમ', 'ಹೋಮ್']
+      home: ['home', 'होम', 'मुख्यपृष्ठ', 'హోమ్', 'முகப்பு', 'হোম', 'હોમ', 'ಹೋಮ್'],
+      transport: ['transport', 'taxi', 'ola', 'uber', 'rapido', 'cab', 'ride', 'auto', 'यात्रा', 'परिवहन', 'टैक्सी', 'ओला', 'उबर', 'ऑटो']
     };
 
-    const routes = { doctor: '/doctor', medicine: '/medicine', food: '/diet-food', massage: '/massage', cleaning: '/cleaning', sos: '/sos', orders: '/orders', home: '/' };
+    const routes = { doctor: '/doctor', medicine: '/medicine', food: '/diet-food', massage: '/massage', cleaning: '/cleaning', sos: '/sos', orders: '/orders', home: '/', transport: '/transport' };
 
     for (const [key, words] of Object.entries(commands)) {
       if (words.some(w => text.includes(w))) {
@@ -286,6 +288,7 @@ function AppContent() {
         <Route path="/medicine" element={<Medicine />} />
         <Route path="/cleaning" element={<Cleaning />} />
         <Route path="/doctor" element={<Doctor />} />
+        <Route path="/transport" element={<Transport />} />
         <Route path="/sos" element={<SOS />} />
         <Route path="/orders" element={<OrderHistory />} />
         <Route path="/health" element={<HealthProfile />} />

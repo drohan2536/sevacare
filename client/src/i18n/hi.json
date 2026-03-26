@@ -29,7 +29,9 @@
     "doctor": "डॉक्टर परामर्श",
     "doctor_desc": "डॉक्टर से बात करें",
     "sos": "इमरजेंसी SOS",
-    "sos_desc": "एक टैप इमरजेंसी मदद"
+    "sos_desc": "एक टैप इमरजेंसी मदद",
+    "transport": "परिवहन",
+    "transport_desc": "ओला, उबर, रैपिडो बुक करें"
   },
   "dashboard": {
     "quick_actions": "त्वरित कार्य",
