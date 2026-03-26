@@ -15,6 +15,7 @@ import Transport from './pages/Transport.jsx';
 import SOS from './pages/SOS.jsx';
 import OrderHistory from './pages/OrderHistory.jsx';
 import HealthProfile from './pages/HealthProfile.jsx';
+import Profile from './pages/Profile.jsx';
 import Subscription from './pages/Subscription.jsx';
 
 function BottomNav() {
@@ -305,7 +306,7 @@ function AppContent() {
         <Route path="/sos" element={<SOS />} />
         <Route path="/orders" element={<OrderHistory />} />
         <Route path="/health" element={<HealthProfile />} />
-        <Route path="/profile" element={<HealthProfile />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/subscription" element={<Subscription />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

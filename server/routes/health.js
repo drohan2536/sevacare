@@ -1,5 +1,25 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+// Ensure uploads dir exists
+const uploadsDir = path.join(__dirname, '../uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+// Multer Config
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, uploadsDir);
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+const upload = multer({ storage: storage });
 
 // Health profiles store
 let healthProfiles = {
@@ -23,7 +43,10 @@ let healthProfiles = {
       insuranceId: 'HEALTH-2024-001',
       primaryDoctor: 'Dr. Anita Deshmukh',
       primaryDoctorPhone: '9800000010'
-    }
+    },
+    documents: [
+      { title: 'Recent Blood Test', type: 'Blood Test', fileUrl: '', fileName: 'blood_test_mock.pdf', date: new Date(Date.now() - 86400000).toISOString() }
+    ]
   }
 };
 
@@ -42,9 +65,11 @@ router.get('/:userId', (req, res) => {
       allergies: [],
       currentMedications: [],
       doctorNotes: [],
-      emergencyInfo: {}
+      emergencyInfo: {},
+      documents: []
     });
   }
+  if (!profile.documents) profile.documents = [];
   res.json(profile);
 });
 
@@ -65,6 +90,43 @@ router.post('/:userId/medication', (req, res) => {
   }
   
   healthProfiles[userId].currentMedications.push({ name, dosage, frequency, time });
+  res.json({ success: true, profile: healthProfiles[userId] });
+});
+
+// Upload Document
+router.post('/:userId/document', upload.single('document'), (req, res) => {
+  const { userId } = req.params;
+  const { title, type } = req.body;
+
+  if (!healthProfiles[userId]) {
+    healthProfiles[userId] = { userId, conditions: [], allergies: [], currentMedications: [], doctorNotes: [], emergencyInfo: {}, documents: [] };
+  }
+  if (!healthProfiles[userId].documents) {
+    healthProfiles[userId].documents = [];
+  }
+
+  if (!req.file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
+
+  const newDoc = {
+    title: title || req.file.originalname,
+    type: type || 'Other',
+    fileUrl: `/uploads/${req.file.filename}`,
+    fileName: req.file.originalname,
+    date: new Date().toISOString()
+  };
+
+  healthProfiles[userId].documents.push(newDoc);
+  res.json({ success: true, document: newDoc, profile: healthProfiles[userId] });
+});
+
+// Delete Document
+router.delete('/:userId/document/:fileName', (req, res) => {
+  const { userId, fileName } = req.params;
+  if (healthProfiles[userId] && healthProfiles[userId].documents) {
+    healthProfiles[userId].documents = healthProfiles[userId].documents.filter(d => d.fileName !== fileName);
+  }
   res.json({ success: true, profile: healthProfiles[userId] });
 });
 
