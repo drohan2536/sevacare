@@ -1,0 +1,100 @@
+{
+  "app_name": "SevaCare",
+  "tagline": "Your Complete Care Companion",
+  "greeting": "Namaste",
+  "welcome_back": "Welcome back",
+  "login": {
+    "title": "Welcome to SevaCare",
+    "subtitle": "Your trusted elderly care companion",
+    "phone": "Phone Number",
+    "phone_placeholder": "Enter your phone number",
+    "send_otp": "Send OTP",
+    "enter_otp": "Enter OTP",
+    "otp_placeholder": "Enter 4-digit OTP",
+    "verify": "Verify & Login",
+    "name": "Your Name",
+    "name_placeholder": "Enter your name",
+    "demo_hint": "Demo OTP: 1234",
+    "new_user": "New here? We'll create your account"
+  },
+  "services": {
+    "diet_food": "Diet Food",
+    "diet_food_desc": "Healthy meals delivered",
+    "massage": "Body Massage",
+    "massage_desc": "Professional therapists",
+    "medicine": "Medicine Delivery",
+    "medicine_desc": "Medicines at your door",
+    "cleaning": "House Cleaning",
+    "cleaning_desc": "Professional cleaners",
+    "doctor": "Doctor Consultation",
+    "doctor_desc": "Talk to a doctor",
+    "sos": "Emergency SOS",
+    "sos_desc": "One-tap emergency help"
+  },
+  "dashboard": {
+    "quick_actions": "Quick Actions",
+    "recent_orders": "Recent Orders",
+    "upcoming": "Upcoming",
+    "health_tip": "Health Tip",
+    "health_tips": [
+      "Walk for 30 minutes daily for a healthy heart ❤️",
+      "Drink 8 glasses of water every day 💧",
+      "Take your medicines on time ⏰",
+      "Eat more fruits and vegetables 🥗",
+      "Get 7-8 hours of sleep every night 😴"
+    ]
+  },
+  "booking": {
+    "select_provider": "Select Provider",
+    "select_date": "Select Date",
+    "select_time": "Select Time Slot",
+    "add_notes": "Special Instructions",
+    "confirm_booking": "Confirm Booking",
+    "booking_confirmed": "Booking Confirmed!",
+    "cancel": "Cancel",
+    "rating": "Rating"
+  },
+  "order": {
+    "your_cart": "Your Cart",
+    "add_to_cart": "Add to Cart",
+    "place_order": "Place Order",
+    "order_placed": "Order Placed!",
+    "delivery_time": "Estimated Delivery",
+    "track_order": "Track Order",
+    "upload_prescription": "Upload Prescription",
+    "total": "Total"
+  },
+  "sos_page": {
+    "title": "Emergency SOS",
+    "subtitle": "Press the button for immediate help",
+    "activate": "PRESS FOR EMERGENCY",
+    "activated": "Help is on the way!",
+    "contacts_notified": "Emergency contacts notified",
+    "hospital_alerted": "Nearest hospital alerted",
+    "location_shared": "Your location has been shared",
+    "cancel_sos": "Cancel Emergency"
+  },
+  "health": {
+    "title": "Health Profile",
+    "blood_group": "Blood Group",
+    "conditions": "Medical Conditions",
+    "allergies": "Allergies",
+    "medications": "Current Medications",
+    "doctor_notes": "Doctor Notes"
+  },
+  "common": {
+    "home": "Home",
+    "orders": "Orders",
+    "profile": "Profile",
+    "history": "History",
+    "back": "Back",
+    "save": "Save",
+    "loading": "Loading...",
+    "no_data": "No data available",
+    "success": "Success!",
+    "error": "Something went wrong",
+    "logout": "Logout",
+    "language": "Language",
+    "chat": "Health Chat"
+  }
+}

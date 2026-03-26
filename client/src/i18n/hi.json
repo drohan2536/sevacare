@@ -1,0 +1,100 @@
+{
+  "app_name": "सेवाकेयर",
+  "tagline": "आपका पूर्ण देखभाल साथी",
+  "greeting": "नमस्ते",
+  "welcome_back": "वापस स्वागत है",
+  "login": {
+    "title": "सेवाकेयर में आपका स्वागत है",
+    "subtitle": "आपका विश्वसनीय बुजुर्ग देखभाल साथी",
+    "phone": "फ़ोन नंबर",
+    "phone_placeholder": "अपना फ़ोन नंबर दर्ज करें",
+    "send_otp": "OTP भेजें",
+    "enter_otp": "OTP दर्ज करें",
+    "otp_placeholder": "4-अंक का OTP दर्ज करें",
+    "verify": "सत्यापित करें और लॉगिन करें",
+    "name": "आपका नाम",
+    "name_placeholder": "अपना नाम दर्ज करें",
+    "demo_hint": "डेमो OTP: 1234",
+    "new_user": "नए हैं? हम आपका खाता बनाएंगे"
+  },
+  "services": {
+    "diet_food": "डाइट खाना",
+    "diet_food_desc": "स्वस्थ भोजन डिलीवरी",
+    "massage": "बॉडी मसाज",
+    "massage_desc": "पेशेवर थेरेपिस्ट",
+    "medicine": "दवाई डिलीवरी",
+    "medicine_desc": "दवाइयां आपके द्वार पर",
+    "cleaning": "घर की सफाई",
+    "cleaning_desc": "पेशेवर सफाईकर्मी",
+    "doctor": "डॉक्टर परामर्श",
+    "doctor_desc": "डॉक्टर से बात करें",
+    "sos": "इमरजेंसी SOS",
+    "sos_desc": "एक टैप इमरजेंसी मदद"
+  },
+  "dashboard": {
+    "quick_actions": "त्वरित कार्य",
+    "recent_orders": "हालिया ऑर्डर",
+    "upcoming": "आगामी",
+    "health_tip": "स्वास्थ्य सुझाव",
+    "health_tips": [
+      "स्वस्थ दिल के लिए रोज़ 30 मिनट चलें ❤️",
+      "रोज़ 8 गिलास पानी पिएं 💧",
+      "समय पर दवाई लें ⏰",
+      "ज़्यादा फल और सब्ज़ियां खाएं 🥗",
+      "हर रात 7-8 घंटे की नींद लें 😴"
+    ]
+  },
+  "booking": {
+    "select_provider": "सेवा प्रदाता चुनें",
+    "select_date": "तारीख़ चुनें",
+    "select_time": "समय चुनें",
+    "add_notes": "विशेष निर्देश",
+    "confirm_booking": "बुकिंग की पुष्टि करें",
+    "booking_confirmed": "बुकिंग की पुष्टि हो गई!",
+    "cancel": "रद्द करें",
+    "rating": "रेटिंग"
+  },
+  "order": {
+    "your_cart": "आपकी कार्ट",
+    "add_to_cart": "कार्ट में जोड़ें",
+    "place_order": "ऑर्डर करें",
+    "order_placed": "ऑर्डर हो गया!",
+    "delivery_time": "अनुमानित डिलीवरी",
+    "track_order": "ऑर्डर ट्रैक करें",
+    "upload_prescription": "प्रिस्क्रिप्शन अपलोड करें",
+    "total": "कुल"
+  },
+  "sos_page": {
+    "title": "इमरजेंसी SOS",
+    "subtitle": "तुरंत मदद के लिए बटन दबाएं",
+    "activate": "इमरजेंसी के लिए दबाएं",
+    "activated": "मदद आ रही है!",
+    "contacts_notified": "इमरजेंसी संपर्कों को सूचित किया गया",
+    "hospital_alerted": "नज़दीकी अस्पताल को सूचित किया गया",
+    "location_shared": "आपका स्थान साझा किया गया",
+    "cancel_sos": "इमरजेंसी रद्द करें"
+  },
+  "health": {
+    "title": "स्वास्थ्य प्रोफाइल",
+    "blood_group": "ब्लड ग्रुप",
+    "conditions": "चिकित्सा स्थितियां",
+    "allergies": "एलर्जी",
+    "medications": "वर्तमान दवाइयां",
+    "doctor_notes": "डॉक्टर नोट्स"
+  },
+  "common": {
+    "home": "होम",
+    "orders": "ऑर्डर",
+    "profile": "प्रोफाइल",
+    "history": "इतिहास",
+    "back": "वापस",
+    "save": "सहेजें",
+    "loading": "लोड हो रहा है...",
+    "no_data": "कोई डेटा नहीं",
+    "success": "सफल!",
+    "error": "कुछ गलत हो गया",
+    "logout": "लॉगआउट",
+    "language": "भाषा",
+    "chat": "स्वास्थ्य चैट"
+  }
+}

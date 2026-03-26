@@ -1,0 +1,12 @@
+{
+  "appId": "com.sevacare.app",
+  "appName": "SevaCare",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": ["*"]
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

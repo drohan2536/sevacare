@@ -1,0 +1,100 @@
+{
+  "app_name": "સેવાકેર",
+  "tagline": "તમારો સંપૂર્ણ સંભાળ સાથી",
+  "greeting": "નમસ્તે",
+  "welcome_back": "ફરી સ્વાગત છે",
+  "login": {
+    "title": "સેવાકેરમાં આપનું સ્વાગત છે",
+    "subtitle": "તમારો વિશ્વાસુ વૃદ્ધ સંભાળ સાથી",
+    "phone": "ફોન નંબર",
+    "phone_placeholder": "તમારો ફોન નંબર દાખલ કરો",
+    "send_otp": "OTP મોકલો",
+    "enter_otp": "OTP દાખલ કરો",
+    "otp_placeholder": "4-અંકનો OTP દાખલ કરો",
+    "verify": "ચકાસો અને લૉગિન કરો",
+    "name": "તમારું નામ",
+    "name_placeholder": "તમારું નામ દાખલ કરો",
+    "demo_hint": "ડેમો OTP: 1234",
+    "new_user": "નવા છો? અમે તમારું ખાતું બનાવીશું"
+  },
+  "services": {
+    "diet_food": "ડાયેટ ફૂડ",
+    "diet_food_desc": "સ્વાસ્થ્યપ્રદ ભોજન ડિલિવરી",
+    "massage": "બૉડી મસાજ",
+    "massage_desc": "વ્યાવસાયિક થેરાપિસ્ટ",
+    "medicine": "દવા ડિલિવરી",
+    "medicine_desc": "દવાઓ તમારા દરવાજે",
+    "cleaning": "ઘર સફાઈ",
+    "cleaning_desc": "વ્યાવસાયિક સફાઈ કર્મચારી",
+    "doctor": "ડૉક્ટર પરામર્શ",
+    "doctor_desc": "ડૉક્ટર સાથે વાત કરો",
+    "sos": "ઇમર્જન્સી SOS",
+    "sos_desc": "એક ટેપ ઇમર્જન્સી મદદ"
+  },
+  "dashboard": {
+    "quick_actions": "ઝડપી ક્રિયાઓ",
+    "recent_orders": "તાજેતરના ઓર્ડર",
+    "upcoming": "આગામી",
+    "health_tip": "સ્વાસ્થ્ય સૂચન",
+    "health_tips": [
+      "સ્વસ્થ હૃદય માટે દરરોજ 30 મિનિટ ચાલો ❤️",
+      "દરરોજ 8 ગ્લાસ પાણી પીવો 💧",
+      "સમયસર દવા લો ⏰",
+      "વધુ ફળો અને શાકભાજી ખાઓ 🥗",
+      "દર રાત્રે 7-8 કલાક ઊંઘો 😴"
+    ]
+  },
+  "booking": {
+    "select_provider": "સેવા પ્રદાતા પસંદ કરો",
+    "select_date": "તારીખ પસંદ કરો",
+    "select_time": "સમય પસંદ કરો",
+    "add_notes": "વિશેષ સૂચનાઓ",
+    "confirm_booking": "બુકિંગ ખાતરી કરો",
+    "booking_confirmed": "બુકિંગ ખાતરી થઈ!",
+    "cancel": "રદ કરો",
+    "rating": "રેટિંગ"
+  },
+  "order": {
+    "your_cart": "તમારી કાર્ટ",
+    "add_to_cart": "કાર્ટમાં ઉમેરો",
+    "place_order": "ઓર્ડર આપો",
+    "order_placed": "ઓર્ડર થયો!",
+    "delivery_time": "અંદાજિત ડિલિવરી",
+    "track_order": "ઓર્ડર ટ્રેક કરો",
+    "upload_prescription": "પ્રિસ્ક્રિપ્શન અપલોડ કરો",
+    "total": "કુલ"
+  },
+  "sos_page": {
+    "title": "ઇમર્જન્સી SOS",
+    "subtitle": "તાત્કાલિક મદદ માટે બટન દબાવો",
+    "activate": "ઇમર્જન્સી માટે દબાવો",
+    "activated": "મદદ આવી રહી છે!",
+    "contacts_notified": "ઇમર્જન્સી સંપર્કોને જાણ કરાઈ",
+    "hospital_alerted": "નજીકની હૉસ્પિટલને જાણ કરાઈ",
+    "location_shared": "તમારું સ્થાન શેર કરાયું",
+    "cancel_sos": "ઈમર્જન્સી રદ કરો"
+  },
+  "health": {
+    "title": "સ્વાસ્થ્ય પ્રોફાઇલ",
+    "blood_group": "બ્લડ ગ્રુપ",
+    "conditions": "તબીબી પરિસ્થિતિઓ",
+    "allergies": "એલર્જી",
+    "medications": "હાલની દવાઓ",
+    "doctor_notes": "ડૉક્ટર નોંધ"
+  },
+  "common": {
+    "home": "હોમ",
+    "orders": "ઓર્ડર",
+    "profile": "પ્રોફાઇલ",
+    "history": "ઇતિહાસ",
+    "back": "પાછળ",
+    "save": "સાચવો",
+    "loading": "લોડ થઈ રહ્યું છે...",
+    "no_data": "કોઈ ડેટા ઉપલબ્ધ નથી",
+    "success": "સફળ!",
+    "error": "કંઈક ખોટું થયું",
+    "logout": "લૉગઆઉટ",
+    "language": "ભાષા",
+    "chat": "સ્વાસ્થ્ય ચેટ"
+  }
+}

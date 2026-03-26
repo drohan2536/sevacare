@@ -1,0 +1,100 @@
+{
+  "app_name": "सेवाकेअर",
+  "tagline": "तुमचा संपूर्ण काळजी सोबती",
+  "greeting": "नमस्कार",
+  "welcome_back": "पुन्हा स्वागत",
+  "login": {
+    "title": "सेवाकेअर मध्ये आपले स्वागत",
+    "subtitle": "तुमचा विश्वासू वृद्ध काळजी सोबती",
+    "phone": "फोन नंबर",
+    "phone_placeholder": "तुमचा फोन नंबर टाका",
+    "send_otp": "OTP पाठवा",
+    "enter_otp": "OTP टाका",
+    "otp_placeholder": "4-अंकी OTP टाका",
+    "verify": "सत्यापित करा आणि लॉगिन करा",
+    "name": "तुमचे नाव",
+    "name_placeholder": "तुमचे नाव टाका",
+    "demo_hint": "डेमो OTP: 1234",
+    "new_user": "नवीन आहात? आम्ही तुमचे खाते तयार करू"
+  },
+  "services": {
+    "diet_food": "आहार अन्न",
+    "diet_food_desc": "आरोग्यदायी जेवण वितरण",
+    "massage": "बॉडी मसाज",
+    "massage_desc": "व्यावसायिक थेरपिस्ट",
+    "medicine": "औषध वितरण",
+    "medicine_desc": "औषधे तुमच्या दारात",
+    "cleaning": "घर स्वच्छता",
+    "cleaning_desc": "व्यावसायिक सफाई कर्मचारी",
+    "doctor": "डॉक्टर सल्लामसलत",
+    "doctor_desc": "डॉक्टरांशी बोला",
+    "sos": "आणीबाणी SOS",
+    "sos_desc": "एक टॅप आणीबाणी मदत"
+  },
+  "dashboard": {
+    "quick_actions": "जलद क्रिया",
+    "recent_orders": "अलीकडील ऑर्डर",
+    "upcoming": "आगामी",
+    "health_tip": "आरोग्य सल्ला",
+    "health_tips": [
+      "निरोगी हृदयासाठी दररोज 30 मिनिटे चाला ❤️",
+      "दररोज 8 ग्लास पाणी प्या 💧",
+      "वेळेवर औषध घ्या ⏰",
+      "जास्त फळे आणि भाज्या खा 🥗",
+      "दररोज रात्री 7-8 तास झोप घ्या 😴"
+    ]
+  },
+  "booking": {
+    "select_provider": "सेवा प्रदाता निवडा",
+    "select_date": "तारीख निवडा",
+    "select_time": "वेळ निवडा",
+    "add_notes": "विशेष सूचना",
+    "confirm_booking": "बुकिंग पुष्टी करा",
+    "booking_confirmed": "बुकिंग पुष्टी झाली!",
+    "cancel": "रद्द करा",
+    "rating": "रेटिंग"
+  },
+  "order": {
+    "your_cart": "तुमची कार्ट",
+    "add_to_cart": "कार्ट मध्ये जोडा",
+    "place_order": "ऑर्डर द्या",
+    "order_placed": "ऑर्डर दिली!",
+    "delivery_time": "अंदाजे वितरण",
+    "track_order": "ऑर्डर ट्रॅक करा",
+    "upload_prescription": "प्रिस्क्रिप्शन अपलोड करा",
+    "total": "एकूण"
+  },
+  "sos_page": {
+    "title": "आणीबाणी SOS",
+    "subtitle": "तत्काळ मदतीसाठी बटण दाबा",
+    "activate": "आणीबाणीसाठी दाबा",
+    "activated": "मदत येत आहे!",
+    "contacts_notified": "आणीबाणी संपर्कांना सूचित केले",
+    "hospital_alerted": "जवळचे रुग्णालय सतर्क केले",
+    "location_shared": "तुमचे स्थान शेअर केले",
+    "cancel_sos": "आणीबाणी रद्द करा"
+  },
+  "health": {
+    "title": "आरोग्य प्रोफाइल",
+    "blood_group": "रक्तगट",
+    "conditions": "वैद्यकीय स्थिती",
+    "allergies": "ऍलर्जी",
+    "medications": "सध्याची औषधे",
+    "doctor_notes": "डॉक्टर नोट्स"
+  },
+  "common": {
+    "home": "मुख्यपृष्ठ",
+    "orders": "ऑर्डर",
+    "profile": "प्रोफाइल",
+    "history": "इतिहास",
+    "back": "मागे",
+    "save": "जतन करा",
+    "loading": "लोड होत आहे...",
+    "no_data": "डेटा उपलब्ध नाही",
+    "success": "यशस्वी!",
+    "error": "काहीतरी चूक झाली",
+    "logout": "लॉगआउट",
+    "language": "भाषा",
+    "chat": "आरोग्य चॅट"
+  }
+}
