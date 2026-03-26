@@ -83,7 +83,31 @@ router.post('/', (req, res) => {
   }
 
   const provider = providers[serviceType]?.find(p => p.id === providerId);
-  
+  let providerInfo = null;
+  if (provider) {
+    if (serviceType === 'massage') {
+      providerInfo = {
+        name: 'Relax & Heal Spa',
+        contact: '9800000111',
+        worker: { name: provider.name, phone: '9000000012', photo: provider.image, degree: provider.specialization }
+      };
+    } else if (serviceType === 'doctor') {
+      providerInfo = {
+        name: 'SevaCare Clinic',
+        contact: '9800000222',
+        worker: { name: provider.name, phone: '9000000013', photo: provider.image, degree: provider.specialization }
+      };
+    } else if (serviceType === 'cleaning') {
+      providerInfo = {
+        name: provider.name,
+        contact: '9800000333',
+        worker: { name: 'Raju Bhai', phone: '9000000014', photo: '👨‍🔧', degree: 'Professional Cleaner' }
+      };
+    } else {
+      providerInfo = { name: provider.name, phone: '9800000000', rating: provider.rating, specialization: provider.specialization };
+    }
+  }
+
   const booking = {
     _id: 'booking_' + Date.now(),
     userId: req.headers['x-user-id'] || 'user1',
@@ -92,7 +116,7 @@ router.post('/', (req, res) => {
     date,
     timeSlot,
     status: 'confirmed',
-    provider: provider ? { name: provider.name, phone: '9800000000', rating: provider.rating, specialization: provider.specialization } : null,
+    provider: providerInfo,
     notes: notes || '',
     address: address || '',
     amount: provider?.price || 0,

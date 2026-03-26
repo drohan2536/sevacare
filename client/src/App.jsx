@@ -15,6 +15,7 @@ import Transport from './pages/Transport.jsx';
 import SOS from './pages/SOS.jsx';
 import OrderHistory from './pages/OrderHistory.jsx';
 import HealthProfile from './pages/HealthProfile.jsx';
+import Subscription from './pages/Subscription.jsx';
 
 function BottomNav() {
   const navigate = useNavigate();
@@ -279,6 +280,18 @@ function AppContent() {
     );
   }
 
+  // Check if subscription is active
+  const subscription = user?.subscription;
+  const isSubscribed = subscription && subscription.plan && new Date(subscription.expiresAt) > new Date();
+
+  if (!isSubscribed) {
+    return (
+      <div className="app-container">
+        <Subscription />
+      </div>
+    );
+  }
+
   return (
     <div className="app-container">
       <Routes>
@@ -293,6 +306,7 @@ function AppContent() {
         <Route path="/orders" element={<OrderHistory />} />
         <Route path="/health" element={<HealthProfile />} />
         <Route path="/profile" element={<HealthProfile />} />
+        <Route path="/subscription" element={<Subscription />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <SOSFloatingButton />
