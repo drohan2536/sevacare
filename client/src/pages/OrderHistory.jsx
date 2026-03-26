@@ -84,6 +84,25 @@ export default function OrderHistory() {
                 {order.items?.map(i => i.name).join(', ')}
               </p>
 
+              {/* Provider Info (Food/Medicine) */}
+              {order.provider && (
+                <div style={{ marginTop: '12px', padding: '12px', background: 'var(--bg-input)', borderRadius: '8px' }}>
+                  <div style={{ fontWeight: '600', color: 'var(--text-primary)' }}>🏢 {order.provider.name}</div>
+                  {order.provider.contact && <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>📞 {order.provider.contact}</div>}
+                  
+                  {order.provider.deliveryBoy && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', borderTop: '1px solid var(--border)', paddingTop: '8px' }}>
+                      <div style={{ fontSize: '28px' }}>{order.provider.deliveryBoy.photo}</div>
+                      <div>
+                        <div style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: '600' }}>{order.provider.deliveryBoy.name}</div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{language === 'hi' ? 'डिलीवरी बॉय' : 'Delivery Partner'}</div>
+                        <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '2px' }}>📞 {order.provider.deliveryBoy.phone}</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* Order Tracker */}
               {order.status !== 'delivered' && order.status !== 'cancelled' && (
                 <div className="tracker-timeline" style={{ margin: '12px 0' }}>
@@ -133,8 +152,28 @@ export default function OrderHistory() {
                 </span>
               </div>
               <p className="order-items-preview">
-                {booking.provider?.name} — {booking.subType || booking.serviceType}
+                {booking.provider?.name || booking.serviceType} — {booking.subType || booking.serviceType}
               </p>
+
+              {/* Provider Info (Massage/Doctor/Cleaning) */}
+              {booking.provider && (
+                <div style={{ marginTop: '12px', marginBottom: '12px', padding: '12px', background: 'var(--bg-input)', borderRadius: '8px' }}>
+                  <div style={{ fontWeight: '600', color: 'var(--text-primary)' }}>🏢 {booking.provider.name}</div>
+                  {(booking.provider.contact || booking.provider.phone) && <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>📞 {booking.provider.contact || booking.provider.phone}</div>}
+                  
+                  {booking.provider.worker && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', borderTop: '1px solid var(--border)', paddingTop: '8px' }}>
+                      <div style={{ fontSize: '28px' }}>{booking.provider.worker.photo}</div>
+                      <div>
+                        <div style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: '600' }}>{booking.provider.worker.name}</div>
+                        {booking.provider.worker.degree && <div style={{ fontSize: '0.8rem', color: 'var(--primary-light)', fontWeight: '600', marginTop: '2px' }}>{booking.provider.worker.degree}</div>}
+                        <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '2px' }}>📞 {booking.provider.worker.phone}</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               <div style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 8 }}>
                 📅 {new Date(booking.date).toLocaleDateString()} • ⏰ {booking.timeSlot}
               </div>

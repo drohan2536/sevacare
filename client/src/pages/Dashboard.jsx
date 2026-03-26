@@ -4,10 +4,11 @@ import { useLanguage } from '../i18n/LanguageContext.jsx';
 import LanguageSelector from '../components/LanguageSelector.jsx';
 import { useState, useEffect } from 'react';
 import { API_BASE_URL } from '../config.js';
+import { PLANS } from './Subscription.jsx';
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
+  const { user, logout, updateUser } = useAuth();
   const { t, language } = useLanguage();
   const [recentOrders, setRecentOrders] = useState([]);
   const [tipIndex, setTipIndex] = useState(0);
@@ -29,7 +30,7 @@ export default function Dashboard() {
     }
   }, [language]);
 
-  const services = [
+  const allServices = [
     { key: 'diet_food', icon: '🍱', path: '/diet-food', className: 'food' },
     { key: 'massage', icon: '💆', path: '/massage', className: 'massage' },
     { key: 'medicine', icon: '💊', path: '/medicine', className: 'medicine' },
@@ -38,6 +39,19 @@ export default function Dashboard() {
     { key: 'transport', icon: '🚕', path: '/transport', className: 'transport' },
     { key: 'sos', icon: '🚨', path: '/sos', className: 'sos-card' },
   ];
+
+  // Filter services based on subscription
+  const subscription = user?.subscription;
+  const allowedKeys = subscription?.serviceKeys || [];
+  const services = allServices.filter(s => s.key === 'sos' || allowedKeys.includes(s.key));
+
+  // Current plan info
+  const currentPlan = PLANS.find(p => p.id === subscription?.plan);
+
+  const changePlan = () => {
+    // Clear subscription to go back to subscription page
+    updateUser({ subscription: null });
+  };
 
   const tips = t('dashboard.health_tips');
 
@@ -56,6 +70,46 @@ export default function Dashboard() {
         <h1 className="dashboard-greeting">{t('greeting')}, {user?.name?.split(' ')[0] || 'User'} 🙏</h1>
         <p className="dashboard-subtitle">{t('tagline')}</p>
       </div>
+
+      {/* Subscription Badge */}
+      {currentPlan && (
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          background: currentPlan.gradient,
+          borderRadius: '14px',
+          padding: '12px 18px',
+          marginBottom: '16px',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '22px' }}>{currentPlan.icon}</span>
+            <div>
+              <div style={{ color: 'white', fontWeight: '700', fontSize: '1rem' }}>
+                {language === 'hi' ? currentPlan.name_hi : currentPlan.name_en} {language === 'hi' ? 'प्लान' : 'Plan'}
+              </div>
+              <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.8rem' }}>
+                {language === 'hi' ? 'मासिक सदस्यता' : 'Monthly Subscription'}
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={changePlan}
+            style={{
+              background: 'rgba(255,255,255,0.2)',
+              color: 'white',
+              border: '1px solid rgba(255,255,255,0.3)',
+              borderRadius: '8px',
+              padding: '6px 12px',
+              fontSize: '0.8rem',
+              fontWeight: '600',
+              cursor: 'pointer'
+            }}
+          >
+            {language === 'hi' ? 'बदलें' : 'Change'}
+          </button>
+        </div>
+      )}
 
       {/* Health Tip Banner */}
       {Array.isArray(tips) && (
@@ -117,3 +171,4 @@ export default function Dashboard() {
     </div>
   );
 }
+

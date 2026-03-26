@@ -110,11 +110,27 @@ router.post('/', (req, res) => {
 
   const totalAmount = items.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
   
+  let assignedProvider = null;
+  if (orderType === 'food') {
+    assignedProvider = {
+      name: 'Swasthya Kitchen',
+      contact: '9876543210',
+      deliveryBoy: { name: 'Ramesh Singh', phone: '9000000001', photo: '👨‍🍳' }
+    };
+  } else if (orderType === 'medicine') {
+    assignedProvider = {
+      name: 'Sanjeevani Pharmacy',
+      contact: '9876543211',
+      deliveryBoy: { name: 'Suresh Kumar', phone: '9000000002', photo: '🛵' }
+    };
+  }
+
   const order = {
     _id: 'order_' + Date.now(),
     userId: req.headers['x-user-id'] || 'user1',
     orderType,
     items,
+    provider: assignedProvider,
     prescriptionImage: prescriptionImage || null,
     dietPlan: dietPlan || null,
     totalAmount,
